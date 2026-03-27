@@ -43,7 +43,7 @@ docker stop flask-container || true
 docker rm flask-container || true  
 
 ### 4. Run New Container
-docker run -d -p 5000:5000 --name flask-container my-flask-app  
+docker run -d -p 5000:5000 --name flask-container2 my-flask-app  
 
 ### 5. Verify Application
 curl http://localhost:5000  
@@ -55,28 +55,25 @@ curl http://localhost:5000
 Terraform is used to provision the EC2 instance where Jenkins is installed and runs the pipeline.
 
 resource "aws_instance" "jenkins_server" {
-  ami           = "ami-xxxxxxxx"
-  instance_type = "t2.micro"
+  ami           = "ami-0e7ff22101b84bcff"
+  instance_type = "t3.micro"
 }
 
 ---
 
 ## How to Run
 
-1. Clone Repository  
-git clone <repo>  
-cd project  
-
-2. Provision Infrastructure  
+1. Provision Infrastructure  
 terraform init  
 terraform apply  
 
-3. Access Jenkins  
+2. Access Jenkins  
 Open Jenkins using EC2 public IP  
-Configure pipeline  
+Configure pipeline with GitHub repository  
 
-4. Run Pipeline  
-Execute Jenkins pipeline to deploy application  
+3. Run Pipeline  
+Execute Jenkins pipeline to build and deploy application  
+
 
 ---
 
