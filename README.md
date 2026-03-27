@@ -39,8 +39,8 @@ Terraform → EC2 → Jenkins → Docker → Flask App
 docker build -t my-flask-app .
 
 ### 3. Stop Old Container
-docker stop flask-container || true  
-docker rm flask-container || true  
+docker stop flask-container2 || true  
+docker rm flask-container2 || true  
 
 ### 4. Run New Container
 docker run -d -p 5000:5000 --name flask-container2 my-flask-app  
@@ -74,7 +74,6 @@ Configure pipeline with GitHub repository
 3. Run Pipeline  
 Execute Jenkins pipeline to build and deploy application  
 
-
 ---
 
 ## Application Output
@@ -85,16 +84,16 @@ http://18.141.229.145:5000
 
 ## Pipeline Result
 
-Application successfully built and deployed  
-Docker container running on EC2  
-Jenkins pipeline completed with SUCCESS  
-Application verified using curl  
+- Application successfully built and deployed  
+- Docker container running on EC2  
+- Jenkins pipeline completed with SUCCESS  
+- Application verified using curl  
 
 ---
 
 ## Key Features
 
-Infrastructure provisioning using Terraform  
-Automated CI/CD pipeline using Jenkins  
-Containerized deployment using Docker  
-Deployment verification step included
+- Infrastructure provisioning using Terraform  
+- Automated CI/CD pipeline using Jenkins  
+- Containerized deployment using Docker  
+- Deployment verification step included  
