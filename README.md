@@ -1,4 +1,4 @@
-﻿# terraform-jenkins-cicd-project1
+﻿# Terraform-Jenkins-cicd-Project1
 # Project overview
 This project demonstrates an end-to-end CI/CD pipeline where Terraform provisions AWS EC2 infrastructure, Jenkins automates build and deployment, and Docker runs a Python Flask application.
 # Architecture
