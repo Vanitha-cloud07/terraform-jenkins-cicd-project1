@@ -30,4 +30,9 @@ terraform init
 terraform apply
 # Application Output
 http://18.141.229.145:5000
+# Key Features
+Infrastructure as Code (Terraform)
+Automated CI/CD pipeline
+Containerized deployment
+Deployment verification
 
